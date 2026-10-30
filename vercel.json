@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "ana-marie-patisserie",
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "styles.css", "use": "@vercel/static" },
+    { "src": "app.js", "use": "@vercel/static" },
+    { "src": "Menu.jpeg", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/guide-utilisation.pdf", "dest": "/guide-utilisation.pdf" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "currency": "XAF",
+  "restaurant": {
+    "name": "ANA MARIE PATISSERIE",
+    "open": true
+  },
+  "products": [
+    {
+      "id": "eclair",
+      "name": "Éclair chocolat",
+      "category": "Pâtisseries",
+      "price": 2100,
+      "description": "Choux garni d'une crème au chocolat noir et glaçage fondant.",
+      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=85",
+      "available": true,
+      "popular": true
+    },
+    {
+      "id": "fraise",
+      "name": "Tarte aux fraises",
+      "category": "Pâtisseries",
+      "price": 2950,
+      "description": "Crème légère à la vanille, fraises fraîches de saison.",
+      "image": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=85",
+      "available": true,
+      "popular": true
+    },
+    {
+      "id": "macaron",
+      "name": "Macaron framboise",
+      "category": "Pâtisseries",
+      "price": 1300,
+      "description": "Biscuit délicat, ganache framboise et cœur fruité.",
+      "image": "https://images.unsplash.com/photo-1558326567-98ae2405596b?auto=format&fit=crop&w=800&q=85",
+      "available": true,
+      "popular": false
+    },
+    {
+      "id": "cheesecake",
+      "name": "Cheesecake framboise",
+      "category": "Pâtisseries",
+      "price": 2750,
+      "description": "Fromage frais onctueux, biscuit spéculoos et coulis maison.",
+      "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=85",
+      "available": true,
+      "popular": true
+    },
+    {
+      "id": "croissant",
+      "name": "Croissant pur beurre",
+      "category": "Viennoiseries",
+      "price": 1050,
+      "description": "Feuilletage doré et croustillant, pur beurre AOP.",
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=85",
+      "available": true,
+      "popular": false
+    },
+    {
+      "id": "pain-chocolat",
+      "name": "Pain au chocolat",
+      "category": "Viennoiseries",
+      "price": 1200,
+      "description": "Pâte feuilletée pur beurre et chocolat noir intense.",
+      "image": "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=800&q=85",
+      "available": true,
+      "popular": false
+    },
+    {
+      "id": "cappuccino",
+      "name": "Cappuccino",
+      "category": "Boissons",
+      "price": 2300,
+      "description": "Double espresso, lait velouté et cacao délicat.",
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=85",
+      "available": true,
+      "popular": true
+    },
+    {
+      "id": "earl-grey",
+      "name": "Thé Earl Grey",
+      "category": "Boissons",
+      "price": 1850,
+      "description": "Thé noir délicat aux notes fraîches de bergamote.",
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=85",
+      "available": true,
+      "popular": false
+    },
+    {
+      "id": "limonade",
+      "name": "Citronnade maison",
+      "category": "Boissons",
+      "price": 2100,
+      "description": "Citron pressé, menthe fraîche et une pointe de miel.",
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85",
+      "available": true,
+      "popular": false
+    }
+  ],
+  "orders": [
+    {
+      "id": "DX-1043",
+      "table": 7,
+      "items": [
+        {
+          "productId": "earl-grey",
+          "name": "Thé Earl Grey",
+          "quantity": 1,
+          "price": 1850
+        },
+        {
+          "productId": "limonade",
+          "name": "Citronnade maison",
+          "quantity": 1,
+          "price": 2100
+        }
+      ],
+      "status": "preparing",
+      "time": "12:18",
+      "note": "",
+      "customerId": "4bed517b-024d-4890-843c-521525d4fe5c"
+    },
+    {
+      "id": "DX-1042",
+      "table": 7,
+      "items": [
+        {
+          "productId": "eclair",
+          "name": "Éclair chocolat",
+          "quantity": 2,
+          "price": 2100
+        },
+        {
+          "productId": "fraise",
+          "name": "Tarte aux fraises",
+          "quantity": 1,
+          "price": 2950
+        },
+        {
+          "productId": "cappuccino",
+          "name": "Cappuccino",
+          "quantity": 1,
+          "price": 2300
+        }
+      ],
+      "status": "pending",
+      "time": "10:42",
+      "note": ""
+    },
+    {
+      "id": "DX-1041",
+      "table": 3,
+      "items": [
+        {
+          "productId": "cheesecake",
+          "name": "Cheesecake framboise",
+          "quantity": 1,
+          "price": 2750
+        },
+        {
+          "productId": "earl-grey",
+          "name": "Thé Earl Grey",
+          "quantity": 2,
+          "price": 1850
+        }
+      ],
+      "status": "preparing",
+      "time": "10:39",
+      "note": "Un peu de lait à part"
+    },
+    {
+      "id": "DX-1040",
+      "table": 2,
+      "items": [
+        {
+          "productId": "croissant",
+          "name": "Croissant pur beurre",
+          "quantity": 2,
+          "price": 1050
+        }
+      ],
+      "status": "ready",
+      "time": "10:35",
+      "note": ""
+    },
+    {
+      "id": "DX-1039",
+      "table": 9,
+      "items": [
+        {
+          "productId": "fraise",
+          "name": "Tarte aux fraises",
+          "quantity": 1,
+          "price": 2950
+        },
+        {
+          "productId": "macaron",
+          "name": "Macaron framboise",
+          "quantity": 2,
+          "price": 1300
+        }
+      ],
+      "status": "served",
+      "time": "10:28",
+      "note": ""
+    },
+    {
+      "id": "DX-1038",
+      "table": 5,
+      "items": [
+        {
+          "productId": "pain-chocolat",
+          "name": "Pain au chocolat",
+          "quantity": 2,
+          "price": 1200
+        },
+        {
+          "productId": "cappuccino",
+          "name": "Cappuccino",
+          "quantity": 1,
+          "price": 2300
+        }
+      ],
+      "status": "served",
+      "time": "10:17",
+      "note": ""
+    }
+  ],
+  "tableStatuses": {},
+  "updatedAt": "2026-10-30T10:18:12.864Z",
+  "customers": [
+    {
+      "id": "4bed517b-024d-4890-843c-521525d4fe5c",
+      "name": "Gemi Ngambou",
+      "email": "roselinngambou@gmail.com",
+      "passwordHash": "2684c5f69ed219b2b454f482fb9a195567ca5953883c157f20cd3d4b911a52f5be6b339f72f8e4267ff578fd72d437a50bf62840e68716804795f6ac55edfb68",
+      "salt": "6d8c9385c4cac72ab435a72f22068bb5"
+    }
+  ],
+  "sessions": [
+    {
+      "customerId": "4bed517b-024d-4890-843c-521525d4fe5c",
+      "tokenHash": "7b47cc29f337ca398c0f49bf669ca421031619538aba0794f2f8a053f7b527a3",
+      "expiresAt": 1793704660356
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 3 /Kids [3 0 R 7 0 R 11 0 R] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Length 985 >>
+stream
+BT
+/F1 22 Tf
+50 790 Td
+(ANA MARIE PATISSERIE) Tj
+0 -32 Td
+/F2 11 Tf
+(Guide d'utilisation et parcours de test) Tj
+0 -25 Td
+0 0 0 rg
+50 760 495 1 re B
+0 -20 Td
+0 0 0 rg
+0 0 0 RG
+(Bienvenue dans l'espace de gestion de votre p?tisserie.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Objectif : piloter les commandes, g?rer la carte et tester) Tj
+0 -18 Td
+(le parcours client de mani?re fluide et professionnelle.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(1. Ouvrez le site : http://localhost:3000) Tj
+0 -18 Td
+(2. Testez la vue client depuis le bouton "Vue client") Tj
+0 -18 Td
+(3. Cr?ez un compte client et passez une commande) Tj
+0 -18 Td
+(4. Revenez dans l'espace ?quipe pour suivre la commande) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Identifiants de d?monstration) Tj
+0 -18 Td
+(Email : equipe@exemple.com) Tj
+0 -18 Td
+(Mot de passe : motdepasse123456) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Le site propose aussi le bouton "Guide PDF" dans le coin) Tj
+0 -18 Td
+(de la page d'accueil pour retrouver cette fiche rapidement.) Tj
+0 -18 Td
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 10 0 R >>
+endobj
+8 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+9 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+10 0 obj
+<< /Length 1001 >>
+stream
+BT
+/F1 22 Tf
+50 790 Td
+(ANA MARIE PATISSERIE) Tj
+0 -32 Td
+/F2 11 Tf
+(Guide d'utilisation et parcours de test) Tj
+0 -25 Td
+0 0 0 rg
+50 760 495 1 re B
+0 -20 Td
+0 0 0 rg
+0 0 0 RG
+(Parcours client) Tj
+0 -18 Td
+(? Cliquez sur "Vue client" dans la barre d'outils.) Tj
+0 -18 Td
+(? Cr?ez un compte ou connectez-vous.) Tj
+0 -18 Td
+(? Parcourez la carte et ajoutez des produits au panier.) Tj
+0 -18 Td
+(? Validez la commande et v?rifiez le suivi.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Espace ?quipe) Tj
+0 -18 Td
+(? G?rer les commandes en cours et leur statut.) Tj
+0 -18 Td
+(? Mettre ? jour la disponibilit? des produits.) Tj
+0 -18 Td
+(? Suivre les tables et la vue du service.) Tj
+0 -18 Td
+(? Modifier le nom de l'?tablissement et l'?tat d'ouverture.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Conseils) Tj
+0 -18 Td
+(? Gardez le serveur d?marr? pour conserver les donn?es.) Tj
+0 -18 Td
+(? Utilisez des identifiants s?curis?s sur un site r?el.) Tj
+0 -18 Td
+(? V?rifiez les commandes avant de lancer le service en salle.) Tj
+0 -18 Td
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 14 0 R >>
+endobj
+12 0 obj
+<< /Length 938 >>
+stream
+BT
+/F1 22 Tf
+50 790 Td
+(ANA MARIE PATISSERIE) Tj
+0 -32 Td
+/F2 11 Tf
+(Guide d'utilisation et parcours de test) Tj
+0 -25 Td
+0 0 0 rg
+50 760 495 1 re B
+0 -20 Td
+0 0 0 rg
+0 0 0 RG
+(Accueil et navigation) Tj
+0 -18 Td
+(? Dashboard : vue d'ensemble et suivi rapide.) Tj
+0 -18 Td
+(? Commandes : gestion des commandes et avancement.) Tj
+0 -18 Td
+(? Tables : plan de salle et statut des tables.) Tj
+0 -18 Td
+(? Carte : produits, disponibilit? et mises ? jour.) Tj
+0 -18 Td
+(? Param?tres : nom de l'?tablissement, ouverture, etc.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(R?capitulatif technique) Tj
+0 -18 Td
+(Application : Node.js / HTML / CSS / JavaScript) Tj
+0 -18 Td
+(Persistance : fichier JSON serveur) Tj
+0 -18 Td
+(Devise : XAF) Tj
+0 -18 Td
+(Acc?s r?serv? : espace ?quipe prot?g? par session) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Merci d'avoir choisi ANA MARIE PATISSERIE.) Tj
+0 -18 Td
+(Le service de commande est pr?t ? ?tre pr?sent? ? vos clients.) Tj
+0 -18 Td
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 15 0 R >>
+endobj
+14 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+15 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+16 0 obj
+<< /Length 938 >>
+stream
+BT
+/F1 22 Tf
+50 790 Td
+(ANA MARIE PATISSERIE) Tj
+0 -32 Td
+/F2 11 Tf
+(Guide d'utilisation et parcours de test) Tj
+0 -25 Td
+0 0 0 rg
+50 760 495 1 re B
+0 -20 Td
+0 0 0 rg
+0 0 0 RG
+(Accueil et navigation) Tj
+0 -18 Td
+(? Dashboard : vue d'ensemble et suivi rapide.) Tj
+0 -18 Td
+(? Commandes : gestion des commandes et avancement.) Tj
+0 -18 Td
+(? Tables : plan de salle et statut des tables.) Tj
+0 -18 Td
+(? Carte : produits, disponibilit? et mises ? jour.) Tj
+0 -18 Td
+(? Param?tres : nom de l'?tablissement, ouverture, etc.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(R?capitulatif technique) Tj
+0 -18 Td
+(Application : Node.js / HTML / CSS / JavaScript) Tj
+0 -18 Td
+(Persistance : fichier JSON serveur) Tj
+0 -18 Td
+(Devise : XAF) Tj
+0 -18 Td
+(Acc?s r?serv? : espace ?quipe prot?g? par session) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Merci d'avoir choisi ANA MARIE PATISSERIE.) Tj
+0 -18 Td
+(Le service de commande est pr?t ? ?tre pr?sent? ? vos clients.) Tj
+0 -18 Td
+ET
+endstream
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000264 00000 n 
+0000000339 00000 n 
+0000000409 00000 n 
+0000001445 00000 n 
+0000001582 00000 n 
+0000001657 00000 n 
+0000001727 00000 n 
+0000002781 00000 n 
+0000002919 00000 n 
+0000003909 00000 n 
+0000004047 00000 n 
+0000004123 00000 n 
+0000004194 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R >>
+startxref
+5184
+%%EOF
