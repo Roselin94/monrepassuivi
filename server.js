@@ -1,9 +1,10 @@
 import { createHash, randomBytes, randomUUID, scrypt, timingSafeEqual } from "node:crypto";
 import { createServer } from "node:http";
-import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
+import { createDbPool, ensurePostgresSchema } from "./db.js";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const defaultDataFile = process.env.DATA_FILE || path.join(root, "data", "app-data.json");
@@ -228,13 +229,32 @@ export async function createAppServer({
   adminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase() || "",
   adminPassword = process.env.ADMIN_PASSWORD || "",
 } = {}) {
+  const databaseUrl = process.env.DATABASE_URL || process.env.POSTGRES_URL || "";
+  const dbPool = createDbPool(databaseUrl);
+  let dbState = { enabled: false, type: "json" };
+
+  if (dbPool) {
+    try {
+      await ensurePostgresSchema(dbPool);
+      dbState = { enabled: true, type: "postgres" };
+    } catch (error) {
+      console.warn("PostgreSQL unavailable, fallback on JSON legacy persistence.", error.message || error);
+      await dbPool.end().catch(() => undefined);
+    }
+  }
+
   let data = await loadStore(dataFile);
   let writeQueue = Promise.resolve();
 
   const save = async () => {
     const tempFile = `${dataFile}.${process.pid}.tmp`;
-    await writeFile(tempFile, JSON.stringify(data, null, 2), "utf8");
-    await rename(tempFile, dataFile);
+    try {
+      await writeFile(tempFile, JSON.stringify(data, null, 2), "utf8");
+      await rename(tempFile, dataFile);
+    } catch (error) {
+      await rm(tempFile, { force: true }).catch(() => undefined);
+      throw error;
+    }
   };
 
   const mutate = (operation) => {
@@ -261,7 +281,12 @@ export async function createAppServer({
 
     try {
       if (request.method === "GET" && pathname === "/api/health") {
-        return sendJson(response, 200, { ok: true, currency: data.currency, updatedAt: data.updatedAt });
+        return sendJson(response, 200, {
+          ok: true,
+          currency: data.currency,
+          updatedAt: data.updatedAt,
+          storage: dbState.enabled ? "postgres" : "json",
+        });
       }
 
       if (request.method === "GET" && pathname === "/api/bootstrap") {
@@ -271,6 +296,7 @@ export async function createAppServer({
           restaurant: data.restaurant,
           products: data.products,
           updatedAt: data.updatedAt,
+          storage: dbState.enabled ? "postgres" : "json",
         });
       }
 
@@ -563,9 +589,10 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   if (!Number.isInteger(port) || port < 1 || port > 65535) {
     throw new Error("PORT doit être un entier compris entre 1 et 65535.");
   }
+  const databaseMode = process.env.DATABASE_URL || process.env.POSTGRES_URL ? "postgres" : "json";
   server.listen(port, host, () => {
     console.log(`ANA MARIE PATISSERIE est disponible sur http://${host}:${port}`);
-    console.log("Persistance active · Devise XAF · Démo locale sans comptes utilisateurs ni paiement.");
+    console.log(`Persistance active · Mode ${databaseMode} · Devise XAF.`);
     if (!process.env.ADMIN_EMAIL?.trim() || (process.env.ADMIN_PASSWORD || "").length < 12) {
       console.warn("Espace équipe désactivé : configurez ADMIN_EMAIL et ADMIN_PASSWORD (12 caractères minimum).");
     }
