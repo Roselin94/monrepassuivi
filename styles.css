@@ -2336,7 +2336,10 @@ select:focus-visible {
   }
 
   .customer-header-actions .button[data-action="back-office"] {
-    display: none;
+    display: inline-flex;
+    min-height: 33px;
+    padding: 7px 9px;
+    font-size: 9px;
   }
 
   .customer-header-actions .icon-button {
