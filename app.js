@@ -191,12 +191,13 @@ if (saved.currencyVersion !== currencyVersion) {
 const requestedTable = new URLSearchParams(window.location.search).get("table");
 const hasCustomerTable = requestedTable !== null && Number.isInteger(Number(requestedTable)) && Number(requestedTable) >= 1 && Number(requestedTable) <= 12;
 const customerTable = hasCustomerTable ? Number(requestedTable) : 7;
+const forceCustomerMenu = hasCustomerTable;
 const state = {
   page: "dashboard",
   customerMode: true,
   customer: null,
   customerOrders: [],
-  customerPage: hasCustomerTable ? "menu" : "login",
+  customerPage: forceCustomerMenu ? "menu" : "login",
   authReturn: "menu",
   tableNumber: customerTable,
   customerCategory: "Tout",
@@ -620,6 +621,9 @@ function renderCustomerOrders() {
 }
 
 function render() {
+  if (forceCustomerMenu && state.customerPage !== "menu") {
+    state.customerPage = "menu";
+  }
   if (state.customerMode) {
     renderCustomer();
     return;
@@ -781,7 +785,7 @@ async function handleAction(action, target) {
     case "customer-mode":
       state.customerMode = true;
       state.customerSearch = "";
-      state.customerPage = "menu";
+      state.customerPage = forceCustomerMenu ? "menu" : "menu";
       render();
       window.scrollTo(0, 0);
       break;
